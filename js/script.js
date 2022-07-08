@@ -9,11 +9,11 @@ const peliculasTop = async() => {
          console.log(datosPeliculas);
          let peliculas= ""; 
          datosPeliculas.results.forEach(pelicula => {
-            peliculas += `<div>
+            peliculas += `<div class="title_post">
             
             <img class= "poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}"
             
-            <h3 class="title_pelicula">${pelicula.title}</h3>
+            <h3 class= "title_pelicula">${pelicula.title}</h3>
             </div>
             `;
             

@@ -42,9 +42,8 @@
   background-color: transparent;
   color: #fff;
   font-size: 16px;
-  
-  
 }
+
 .buscador input {
   width: 100%;
   max-width: 300px;
@@ -53,20 +52,23 @@
 
 
 #container_peliculas {
-   width: 90%;
-   max-width: 1000px;
-   padding: 90px;
-   /* margin: 100px auto 100px auto; */
-   display: grid;
-   grid-template-columns: repeat(5, 1fr);
-   gap:40px;
+  width: 90%;
+  max-width: 1000px;
+  padding: 90px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap:40px;
 }
 
-#container_peliculas h3 {
-   font-size: 30px;
-   line-height: 28px;
-   text-align: center;
-   font-weight: 700;
+.title_post {
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  font-weight: 600;
+}
+.title_post h3{
+  padding: 10px;
+  
 }
 
 .poster {
