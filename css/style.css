@@ -18,12 +18,39 @@
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
+
 }
-.container h2 {
+.title{
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+}
+.title h2 {
    text-align: center;
    padding:25px;
    font-size: 47px;
 }
+.title input{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.6em;
+  border-radius: 50px;
+  border: 0.5 solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  
+  
+}
+.buscador input {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
 
 #container_peliculas {
    width: 90%;
