@@ -1,20 +1,22 @@
 const peliculasTop = async() => {
    
    try {
-      const cargarPeli = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=1c990d8d516c09815cc67448a193cf2c&languaje=pt-BR');
-      console.log(cargarPeli);
+      const cargarPeli = await fetch('https://api.themoviedb.org/3/movie/popular/?api_key=1c990d8d516c09815cc67448a193cf2c&language=pt-BR');
+      //console.log(cargarPeli);
 
       if(cargarPeli.status === 200){
          const datosPeliculas = await cargarPeli.json();
-
-         let peliculas = ""; 
+         console.log(datosPeliculas);
+         let peliculas= ""; 
          datosPeliculas.results.forEach(pelicula => {
-            peliculas += `
-               <div class= "pelicula">
-                  <img class= "poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}"
-               </div>
+            peliculas += `<div>
             
-            <h3>${pelicula.title}</h3>`;
+            <img class= "poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}"
+            
+            <h3 class="title_pelicula">${pelicula.title}</h3>
+            </div>
+            `;
+            
          });
          document.getElementById('container_peliculas').innerHTML = peliculas;
    

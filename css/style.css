@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cabecera {
+  height: 5rem;
+  background-color: #0e0b14;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.container {
+  background-image: url('/img/background-pelisTop.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.container h2 {
+   text-align: center;
+   padding:25px;
+   font-size: 47px;
+}
+
+#container_peliculas {
+   width: 90%;
+   max-width: 1000px;
+   padding: 90px;
+   /* margin: 100px auto 100px auto; */
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap:40px;
+}
+
+#container_peliculas h3 {
+   font-size: 30px;
+   line-height: 28px;
+   text-align: center;
+   font-weight: 700;
+}
+
+.poster {
+  height: 50vh;
+  border-radius: 20px;
+  box-shadow: #0e0b14;
+}
