@@ -7,6 +7,26 @@ const peliculasTop = async() => {
       if(cargarPeli.status === 200){
          const datosPeliculas = await cargarPeli.json();
          console.log(datosPeliculas);
+
+
+         const buscaForm = document.querySelector('#buscar');
+         const resultado = document.querySelector('#peliculas_busqueda');
+         const buscarFilme = () =>{
+            const valor = buscaForm.value.toLowerCase();
+            for (busqueda of results){
+               let nombre = busqueda.title.toLowerCase();
+               if (nombre.indexOf(valor) !== -1){
+                  resultado.inneHTML += `<div>${results.title}</div>`
+               }
+            }
+         }
+         // let resultados = "";
+         // datosPeliculas.results.foeach(resultado =>{
+         //    resultados += `${resultado.title.toLowerCase()}`;
+         // });
+         // document.getElementById('peliculas_busqueda').innerHTML = resultados;
+
+
          let peliculas= ""; 
          datosPeliculas.results.forEach(pelicula => {
             peliculas += `<div class="title_post">
