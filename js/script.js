@@ -5,7 +5,7 @@ const peliculasTop = async() => {
 
       if(cargarPeli.status === 200){
          const datosPeliculas = await cargarPeli.json();
-         console.log(datosPeliculas);
+         
          let peliculas= ""; 
          datosPeliculas.results.forEach(pelicula => {
             peliculas += `<div class="title_post">
